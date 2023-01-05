@@ -11,3 +11,15 @@ li {
 a {
   color: #00B7FF;
 }
+
+form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > * {
+  margin: 5px;
+}

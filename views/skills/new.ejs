@@ -11,10 +11,13 @@
   <h1>New Skill</h1>
   <form action="/skills" method="post" autocomplete="off">
     <input type="text" name="skill" placeholder="Skill Name">
-    <select name="category" id="category">
-      <option value="frontend">Frontend</option>
-      <option value="backend">Backend</option>
-    </select>
+    <div>
+      <label for="category">Category:</label>
+      <select name="category" id="category">
+        <option value="frontend">Frontend</option>
+        <option value="backend">Backend</option>
+      </select>
+    </div>
     <div>
       <label for="learned">Learned:</label>
       <select name="learned" id="learned">

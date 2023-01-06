@@ -17,7 +17,12 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+form
+input {
+  width: 200px;
 }
 
 form > * {

@@ -12,13 +12,13 @@
   <ul>
     <% skills.forEach(skill => { %> 
       <li>
-        <%= skill.skill %>
+        <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
         -
         <%= skill.isPlural ? 'are' : 'is' %> 
         part of
         <%= skill.category %> 
         web development and
-        <%= skill.learned ? skill.isPlural ? 'they have been learned' : 'it has been learned' : skill.isPlural ? 'they have NOT been learned' : 'it has NOT been learned' %> 
+        <%= skill.learned ? skill.isPlural ? 'they have been learned' : 'it has been learned' : skill.isPlural ? 'they have NOT been learned' : 'it has NOT been learned' %>
       </li>
     <% }) %> 
   </ul>

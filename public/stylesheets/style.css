@@ -38,5 +38,17 @@ input {
 }
 
 .delete-btn {
-  margin-right: 0px;
+  margin-right: 8px;
+  background-color: transparent;
+  color: black;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.delete-btn:hover {
+  cursor: pointer;
+  color: red;
 }

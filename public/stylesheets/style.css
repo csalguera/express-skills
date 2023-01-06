@@ -5,7 +5,9 @@ body {
 }
 
 li {
-  padding: 5px 0;
+  /* padding: 5px 0; */
+  list-style: none;
+  margin-bottom: 8px;
 }
 
 a {
@@ -13,7 +15,7 @@ a {
 }
 
 form {
-  width: 300px;
+  /* width: 300px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,5 +28,13 @@ input {
 }
 
 form > * {
-  margin: 5px;
+  /* margin: 5px; */
+}
+
+.delete-form {
+  display: inline-block;
+}
+
+.delete-btn {
+  margin-right: 0px;
 }

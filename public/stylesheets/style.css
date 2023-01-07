@@ -28,11 +28,6 @@ form {
   margin: 5px;
 }
 
-form
-input {
-  width: 200px;
-}
-
 .delete-form {
   display: inline-block;
 }

@@ -5,6 +5,7 @@ const Schema = mongoose.Schema
 const skillSchema = new Schema({
   skill: String,
   category: String,
+  technology: String,
   learned: Boolean,
   isPlural: Boolean
 })

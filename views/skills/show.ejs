@@ -5,14 +5,32 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <title>Skill</title>
 </head>
 <body>
   <h1>Skill</h1>
-  <h2><%= skill.skill %></h2>
+  <div class="container">
+    <img src="<%=
+    skill.technology === 'HTML5' ?
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg' :
+    skill.technology === 'CSS' ?
+    'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg' :
+    skill.technology === 'JavaScript' ?
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" :
+    skill.technology === 'Node.js' ?
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" :
+    skill.technology === 'Express.js' ?
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" :
+    skill.technology === 'MongoDB' ?
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" :
+    skill.technology === 'Other'
+    %>" alt="Other Technology" width="50px">
+    <h2><%= skill.skill %></h2>
+</div>
   <a href="/skills/<%= skill._id %>/edit">Edit Skill</a>
-  <p>Category: <%= skill.category %> </p>
-  <p>Learned: <%= skill.learned ? skill.isPlural ? 'Have been learned' : 'Has been learned' : skill.isPlural ? 'Have NOT been learned' : 'Has NOT been learned' %> </p>
+  <p>Category: <%= skill.category %></p>
+  <p>Learned: <%= skill.learned ? skill.isPlural ? 'Have been learned' : 'Has been learned' : skill.isPlural ? 'Have NOT been learned' : 'Has NOT been learned' %></p>
   <a href="/skills">Go Back</a>
 </body>
 </html>

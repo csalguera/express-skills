@@ -12,6 +12,7 @@
   <ul>
     <% skills.forEach(skill => { %> 
       <li>
+        <div class="container">
         <form
           action="/skills/<%= skill.id %>?_method=DELETE"
           class="delete-form"
@@ -19,13 +20,29 @@
           >
           <button class="delete-btn" type="submit">X</button>
         </form>
-        <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
-        -
-        <%= skill.isPlural ? 'are' : 'is' %> 
-        part of
-        <%= skill.category %>
-        web development and
-        <%= skill.learned ? skill.isPlural ? 'they have been learned' : 'it has been learned' : skill.isPlural ? 'they have NOT been learned' : 'it has NOT been learned' %>
+          <img src="<%=
+          skill.technology === 'HTML5' ?
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg' :
+          skill.technology === 'CSS' ?
+          'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg' :
+          skill.technology === 'JavaScript' ?
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" :
+          skill.technology === 'Node.js' ?
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" :
+          skill.technology === 'Express.js' ?
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" :
+          skill.technology === 'MongoDB' ?
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" :
+          skill.technology === 'Other'
+          %>" alt="Other Technology" width="25px">
+          <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
+          -
+          <%= skill.isPlural ? 'are' : 'is' %> 
+          part of
+          <%= skill.category %>
+          web development and
+          <%= skill.learned ? skill.isPlural ? 'they have been learned' : 'it has been learned' : skill.isPlural ? 'they have NOT been learned' : 'it has NOT been learned' %>
+      </div>
       </li>
     <% }) %> 
   </ul>

@@ -9,8 +9,8 @@
 </head>
 <body>
   <h1>Skill</h1>
-  <h2>Skill #<%= skill._id %></h2>
-  <h3><%= skill.skill %> </h3>
+  <h2><%= skill.skill %></h2>
+  <a href="/skills/<%= skill._id %>/edit">Edit Skill</a>
   <p>Category: <%= skill.category %> </p>
   <p>Learned: <%= skill.learned ? skill.isPlural ? 'Have been learned' : 'Has been learned' : skill.isPlural ? 'Have NOT been learned' : 'Has NOT been learned' %> </p>
   <a href="/skills">Go Back</a>

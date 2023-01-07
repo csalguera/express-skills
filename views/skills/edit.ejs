@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Edit Skill</title>
+</head>
+<body>
+  <h1>Edit Skill</h1>
+  <form class="edit-form" action="/skills/<%= skill._id %>?_method=PUT" method="POST" autocomplete="off">
+    <input value="<%= skill.skill %>" type="text" name="skill" placeholder="Skill Name">
+    <div>
+      <label for="category">Category:</label>
+      <select name="category" id="category">
+        <option value="Frontend">Frontend</option>
+        <option value="Backend">Backend</option>
+      </select>
+    </div>
+    <div>
+      <label for="learned">Learned:</label>
+      <select name="learned" id="learned">
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
+    </div>
+    <div>
+      <label for="isPlural">Singular or Plural:</label>
+      <select name="isPlural" id="isPlural">
+        <option value="false">Singular</option>
+        <option value="true">Plural</option>
+      </select>
+    </div>
+    <button type="submit">Edit Skill</button>
+  </form>
+</body>
+</html>

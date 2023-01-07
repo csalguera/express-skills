@@ -33,7 +33,9 @@
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" :
           skill.technology === 'MongoDB' ?
           "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" :
-          skill.technology === 'Other'
+          skill.technology === 'React.js' ?
+          "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" :
+          "https://cdn3.iconfinder.com/data/icons/3d-glossy-blue/512/settings-512.png"
           %>" alt="Other Technology" width="25px">
           <a href="/skills/<%= skill.id %>"><%= skill.skill %></a>
           -

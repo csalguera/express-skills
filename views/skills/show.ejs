@@ -24,12 +24,15 @@
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" :
     skill.technology === 'MongoDB' ?
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" :
-    skill.technology === 'Other'
-    %>" alt="Other Technology" width="50px">
+    skill.technology === 'React.js' ?
+    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" :
+    "https://cdn3.iconfinder.com/data/icons/3d-glossy-blue/512/settings-512.png"
+    %>" alt="Other" width="50px">
     <h2><%= skill.skill %></h2>
 </div>
   <a href="/skills/<%= skill._id %>/edit">Edit Skill</a>
   <p>Category: <%= skill.category %></p>
+  <p>Technology: <%= skill.skill %> is used within <%= skill.technology %> technology</p>
   <p>Learned: <%= skill.learned ? skill.isPlural ? 'Have been learned' : 'Has been learned' : skill.isPlural ? 'Have NOT been learned' : 'Has NOT been learned' %></p>
   <a href="/skills">Go Back</a>
 </body>

@@ -19,6 +19,8 @@ function newSkill(req, res) {
 
 function create(req, res) {
   console.log(req.body);
+  req.body.learned = !!req.body.learned
+  req.body.isPlural = !!req.body.isPlural
   Skill.create(req.body)
   .then(skill => {
     res.redirect('/skills')
@@ -67,6 +69,8 @@ function edit(req, res) {
 }
 
 function update(req, res) {
+  req.body.learned = !!req.body.learned
+  req.body.isPlural = !!req.body.isPlural
   Skill.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(skill => {
     res.redirect(`/skills/${skill._id}`)

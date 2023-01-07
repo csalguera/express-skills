@@ -20,11 +20,8 @@ form {
   align-items: flex-start;
 }
 
-.new-form {
-  width: 300px;
-}
-
-.new-form > * {
+.new-form > *,
+.edit-form > * {
   margin: 5px;
 }
 

@@ -14,9 +14,8 @@
     <div>
       <label for="category">Category:</label>
       <select name="category" id="category">
-        <option value="<%= skill.category %>"><%= skill.category %></option>
-        <option value="Frontend">Frontend</option>
-        <option value="Backend">Backend</option>
+        <option value="<%= skill.category === 'Frontend' ? 'Frontend' : 'Backend' %>"><%= skill.category === 'Frontend' ? 'Frontend' : 'Backend' %></option>
+        <option value="<%= skill.category !== 'Frontend' ? 'Frontend' : 'Backend' %>"><%= skill.category !== 'Frontend' ? 'Frontend' : 'Backend' %></option>
       </select>
     </div>
     <div>

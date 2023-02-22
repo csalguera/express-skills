@@ -1,3 +1,4 @@
+import { technologyLogos } from "../public/assets/logos.js";
 import { Skill } from "../models/skill.js"
 
 function index(req, res) {
@@ -5,7 +6,8 @@ function index(req, res) {
   .then(skills => {
     res.render('skills/index', {
       title: 'Skills List',
-      skills: skills
+      skills: skills,
+      logos: technologyLogos
     })
   }).catch(error => {
     console.log(error);
@@ -35,7 +37,8 @@ function show(req, res) {
   Skill.findById(req.params.id)
   .then(skill => {
     res.render('skills/show', {
-      skill: skill
+      skill: skill,
+      logos: technologyLogos
     })
   })
   .catch(error => {
